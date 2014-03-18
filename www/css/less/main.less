@@ -89,6 +89,12 @@ header{
 	width: 100%;
 	background: @mainColor;
 	color:white;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	h1{
+		margin: 0.8rem;
+	}
 	h1 small{
 		font-size: 43%;
 	}
@@ -97,7 +103,7 @@ header{
 		text-decoration: none;
 		text-transform: uppercase;
 		padding: 1rem;
-		margin-top: 2rem;
+		margin-top: .9rem;
 		display: inline-block;
 	}
 }
@@ -105,6 +111,7 @@ header{
 #home{
 	background: @mainColor;
 	color:white;
+	padding-top: 130px;
 	h1{
 		font-size: 3rem;
 		color:@clouds;
@@ -118,7 +125,7 @@ header{
 
 #features{
 	img{
-		width: 150px;
+		width: 100px;
 	}
 	h2{
 		font-weight: 300;
@@ -130,6 +137,9 @@ header{
 		&:visited, &:active, &:hover{
 			color:@emerald;
 		}
+	}
+	.row{
+		margin-bottom: 2rem;
 	}
 }
 
