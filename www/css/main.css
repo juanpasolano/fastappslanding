@@ -81,7 +81,8 @@ html {
 .button:hover {
   background: #a82315;
 }
-p {
+p,
+li {
   font-weight: 400;
   color: #2c3e50;
   font-size: 1.1rem;
@@ -135,7 +136,7 @@ header a {
   display: inline-block;
 }
 article {
-  margin-top: 74px;
+  margin-top: 4rem;
 }
 #home {
   background: #e74c3c;
@@ -169,6 +170,9 @@ article {
 #features .row {
   margin-bottom: 2rem;
 }
+#demo {
+  background: #1abc9c;
+}
 #demo .frame-holder {
   position: relative;
 }
@@ -182,14 +186,14 @@ article {
   width: 331px;
   height: 492px;
 }
-#docu ul {
+#docu ul.menu {
   padding: 0;
   margin: 0;
 }
-#docu ul li {
+#docu ul.menu li {
   list-style: none;
 }
-#docu ul li a {
+#docu ul.menu li a {
   color: #3498db;
   display: block;
   text-decoration: none;
@@ -201,4 +205,9 @@ article {
 }
 #docu code {
   color: #16527a;
+}
+@media only screen and (max-width: 40.063em) {
+  html {
+    font-size: 70%;
+  }
 }
