@@ -1,0 +1,21 @@
+<div class="page">
+
+	<div class="row">
+		<div class="column medium-7 small-centered medium-centered large-centered">
+			<form name="form" action="" ng-submit="loginSubmit()" novalidate>
+
+				<input type="email" placeholder="Username" ng-model="loginData.username" name="username" required>
+				<div ng-show="form.username.$dirty && form.username.$invalid">
+					<small class="error" ng-show="form.username.$error.required" style="margin-top: -1rem;">This field is required</small>
+					<small class="error" ng-show="form.username.$error.email" style="margin-top: -1rem;">This is not a valid email.</small>
+		    </div>
+
+				<input type="password" placeholder="Password" ng-model="loginData.password" name="password" required>
+
+				<input type="submit" class="button" value="Log In" ng-disabled="form.$invalid">
+			</form>
+			<a ng-href="#/login/recover">Have you forgotten your password?</a>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, height=device-height, initial-scale=1"/>
+    <meta name="description" content="Description"/>
+    <meta name="keywords" content="Keywords"/>
+    <meta name="author" content="imaginamos.com">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>Angular boilerplate</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+
+    <link rel="stylesheet" type="text/css" href="css/vendor/foundation.min.css"/>
+    <link rel="stylesheet" type="text/css" href="js/vendor/swiper/idangerous.swiper.css"/>
+    <link rel="stylesheet" type="text/css" href="js/vendor/swiper/idangerous.swiper.scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+
+
+
+
+</head>
+<body ng-app="app" ng-cloak>
+
+    <div id="app" ng-controller="MainCtrl">
+
+
+        <div id="sideNav">
+            <div class="row logo-widget">
+                <img src="https://en.gravatar.com/userimage/10212117/55aaef8201270c8b51fb9912b61a6fb2.jpg?size=200" class="image" alt="">
+            </div>
+            <h2 class="vertical-menu-title">Menu title</h2>
+            <ul class="vertical-menu">
+                <li><a href="#/home" ng-click="toggleSideNav()" class="has-icon entypo-home has-chevron">Home</a></li>
+                <li><a href="#/listview" ng-click="toggleSideNav()" class="has-icon entypo-text-doc has-chevron">ListView</a></li>
+                <li><a href="#/forms" ng-click="toggleSideNav()" class="has-icon entypo-list has-chevron">Forms</a></li>
+                <li><a href="#/calendar" ng-click="toggleSideNav()" class="has-icon entypo-calendar has-chevron">Calendar</a></li>
+                <li><a href="#/map" ng-click="toggleSideNav()" class="has-icon entypo-map has-chevron">Map</a></li>
+                <li><a href="#/swiper" ng-click="toggleSideNav()" class="has-icon entypo-circled-right has-chevron">Swiper</a></li>
+                <li><a href="#/d3Charts" ng-click="toggleSideNav()" class="has-icon entypo-bar-graph has-chevron">D3 Charts</a></li>
+                <li><a href="#/chartsjs" ng-click="toggleSideNav()" class="has-icon entypo-bar-graph has-chevron">Chartsjs</a></li>
+            </ul>
+            <h2 class="vertical-menu-title">Menu title</h2>
+            <ul class="vertical-menu">
+                <li><a href="#/" ng-click="toggleSideNav()" class="has-icon entypo-logout has-chevron">Logout</a></li>
+            </ul>
+        </div>
+
+
+
+        <div id="wrapper"  ng-class="{true: 'blur-filter'}[config.wrapperIsBlured]">
+
+
+            <!-- HEADER -->
+            <div id="header" class="row collapse"  ng-class="{'shown' : config.hasHeader == true}">
+                <div class="column small-2">
+                    <a class="button menuButton" ng-click="toggleSideNav()" ng-show="config.hasSideNavigation && !config.hasBackButton">&#9776;</a>
+                    <a class="button menuButton" ng-click="goBack()" ng-show="config.hasBackButton">&#59237;</a>
+                </div>
+                <div class="column small-8 tac">
+                    <h3 class="title">{{config.title}}</h3>
+                </div>
+                <div class="column small-2 tar">
+                    <a class="button menuButton" ng-show="config.hasRightButton">&#59196;</a>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div id="content" style="{{contentStyles()}}">
+
+                <!-- prevents events when sidenavigation is open -->
+                <div class="content-cover" ng-swipe-left="toggleSideNav()"></div>
+
+                <div ng-view="" class="page-holder page-pop-animation clearfix">
+
+                </div>
+            </div>
+
+
+
+
+            <div id="footer" ng-class="{true: 'shown'}[config.hasFooter]">
+                <a href="#/home">Home</a>
+                <a href="#/listview" >ListView</a>
+                <a href="#/calendar" >Calendar</a>
+                <a href="#/map">Map</a>
+            </div>
+
+        </div>
+
+        <!-- Toast element -->
+        <div id="toasts" mb-toast="">
+            <div class="toast {{m.type}}" ng-repeat="m in messages">{{m.title}}</div>
+        </div>
+
+        <!-- Loading widget -->
+        <div id="loading" mb-loading-pop-over="">
+            <div class="msgBox">
+                <p>{{options.text}}</p>
+                <div mb-loading-spinner></div>
+            </div>
+        </div>
+
+        <!-- MODALS -->
+        <div id="modals-container" mb-modal-box="" class="clearfix">
+            <div class="modal">
+                <h1 class="title">{{options.title}}</h1>
+                <div class="close-button entypo-font" ng-click="closeModal()">&#10062;</div>
+                <div class="content">
+
+                </div>
+                <div class="footer row extend">
+                    <div class="column small-6">
+                        <a href="" class="button tiny w100p" ng-click="closeModal()" ng-show="options.hasAcceptBtn">{{options.acceptText}}</a>
+                    </div>
+                    <div class="column small-6">
+                        <a href="" class="button tiny secondary w100p" ng-click="closeModal()"ng-show="options.hasCancelBtn">{{options.cancelText}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- cordova -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- jQuery -->
+    <script src="js/vendor/jquery-2.0.3.min.js"></script>
+
+    <!-- Fastclick -->
+    <script src="js/vendor/fastclick.js"></script>
+
+    <!-- Google maps -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+    <script src="js/vendor/googlemaps/markerclusterer_compiled.js"></script>
+
+    <!-- Angular -->
+    <script src="js/vendor/angular-1.2.13/angular.min.js"></script>
+    <script src="js/vendor/angular-1.2.13/angular-route.min.js"></script>
+    <script src="js/vendor/angular-1.2.13/angular-animate.min.js"></script>
+    <script src="js/vendor/angular-1.2.13/angular-touch.min.js"></script>
+
+    <!-- Underscore: If you dont know what underscore does... -->
+    <script src="js/vendor/underscore-min.js"></script>
+
+    <!-- google maps directive: Third party directive for maps
+    <script type="text/javascript" src="js/vendor/angular-google-maps.js"></script> -->
+
+    <!-- momentjs: For dates manipulation -->
+    <script type="text/javascript" src="js/vendor/momentjs/moment-with-langs.min.js"></script>
+
+    <!-- CLNDR: Calendar -->
+    <script type="text/javascript" src="js/vendor/clndr/clndr.min.js"></script>
+
+    <!-- Swiper: for touch galleries ro carousels -->
+    <script type="text/javascript" src="js/vendor/swiper/idangerous.swiper.js"></script>
+    <script type="text/javascript" src="js/vendor/swiper/idangerous.swiper.scrollbar-2.1.js"></script>
+
+    <!-- Showdown: for markdown parcing -->
+    <script type="text/javascript" src="js/vendor/showdown/showdown.min.js"></script>
+
+    <!-- d3: For graphic charts -->
+    <script type="text/javascript" src="js/vendor/d3/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/vendor/chartjs/Chart.min.js"></script>
+
+    <!-- My App -->
+    <script src="js/dist/built.js"></script>
+
+
+</body>
+</html>

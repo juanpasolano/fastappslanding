@@ -157,6 +157,19 @@ header a {
 #features .row {
   margin-bottom: 2rem;
 }
+#demo .frame-holder {
+  position: relative;
+}
+#demo .frame-holder img {
+  max-width: none;
+}
+#demo .frame-holder iframe {
+  position: absolute;
+  top: 124px;
+  left: 42px;
+  width: 331px;
+  height: 492px;
+}
 #docu ul {
   padding: 0;
   margin: 0;

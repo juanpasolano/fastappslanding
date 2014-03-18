@@ -1,0 +1,23 @@
+<div class="page">
+
+	<form name="form" action="" ng-submit="recoverSubmit()" ng-hide="mailsent" novalidate>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, quo, ipsum, aut atque eos ratione cum iusto expedita illum asperiores beatae consequuntur quisquam placeat ducimus sapiente nihil magni maxime natus!</p>
+
+		<input type="email" placeholder="Email" ng-model="loginData.username" name="username" required>
+    <div ng-show="form.username.$dirty && form.username.$invalid">
+			<small class="error" ng-show="form.username.$error.required" style="margin-top: -1rem;">This field is required</small>
+			<small class="error" ng-show="form.username.$error.email" style="margin-top: -1rem;">This is not a valid email.</small>
+    </div>
+
+		<input type="submit" class="button" value="Get the password" ng-disabled="form.$invalid">
+
+	</form>
+
+	<div ng-show="mailsent">
+		<h4 >An email has been sent to your account with instructions for getting a new password.</h4>
+		<div class="spacer-2"></div>
+		<a ng-href="#/login" class="button">Back to login</a>
+	</div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="page" mb-scrollfixer>
+
+
+<div class="" mb-markdown>
+#Welcome
+
+Please be walcome to my angular boilerplate for mobile devices
+
+This boileplate has a number of helpful modules for you to start building your angular/phonegap app.
+
+**By the way this text is writen in markdown and parced by a directive**
+</div>
+
+		<h3>Toasts</h3>
+		<div class="row extend collapse">
+			<div class="column small-4">
+				<a ng-click="emitToast('error')" class="button tiny w100p tac">Error</a>
+			</div>
+			<div class="column small-4">
+				<a ng-click="emitToast('warning')" class="button tiny dark w100p tac">Warning</a>
+			</div>
+			<div class="column small-4">
+				<a ng-click="emitToast('success')" class="button tiny dark w100p tac">Success</a>
+			</div>
+		</div>
+
+		<hr>
+
+		<h3>Modals Directive</h3>
+		<div class="row extend collapse">
+			<div class="column small-4">
+				<a ng-click="emitModal('partials/modals/simpleModal.html')" class="button tiny dark w100p tac">Simple</a>
+			</div>
+			<div class="column small-4">
+				<a ng-click="emitModal('partials/modals/formModal.html')" class="button tiny dark w100p tac">Form</a>
+			</div>
+			<div class="column small-4">
+				<a ng-click="emitStringModal()" class="button tiny dark w100p tac">String</a>
+			</div>
+		</div>
+
+		<hr>
+		<h3>Loading Widget Directive</h3>
+		<p>This widget should be used whenever you need the user to wait a little bit. The animation is so cool! users will hang just to see it. If you want to see information on how to implement go to the js/app/directives/loadingPopOver.js fil</p>
+		<a ng-click="showLoading()" class="button dark has-icon entypo-text-doc has-chevron w100p tac">Show loading content</a>
+</div>
