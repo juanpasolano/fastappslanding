@@ -1,0 +1,19 @@
+<div class="page">
+
+    <div class="" ng-show="!items" style="margin-top: 1rem;">
+        <div mb-loading-spinner></div>
+    </div>
+
+    <input type="text" ng-model="searchText.name" ng-show="items"/>
+    <ul class="listview">
+    	<li ng-repeat="item in items | filter:searchText " class="row column medium-6" ng-click="getDetails(item)">
+    		<div class="column small-3">
+    			<img src="{{item.image[2]['#text']}}" alt="">
+    		</div>
+    		<div class="column small-9">
+    			<h3 class="title">{{item.name}}</h3>
+    			<h6>{{item.artist}}</h6>
+    		</div>
+    	</li>
+    </ul>
+</div>
