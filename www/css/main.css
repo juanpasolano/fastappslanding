@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 /*This is the almighty clearfix*/
 .clearfix:after {
   visibility: hidden;
@@ -56,4 +57,113 @@
 .ng-cloak,
 .x-ng-cloak {
   display: none !important;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato';
+}
+html {
+  font-size: 100%;
+}
+p {
+  font-weight: 400;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+}
+h1 {
+  font-size: 3rem;
+}
+code {
+  color: #e74c3c;
+}
+section {
+  width: 100%;
+  padding: 3rem;
+}
+section h1 {
+  font-size: 4rem;
+  color: #34495e;
+  font-weight: 300;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #E2E2E2;
+}
+header {
+  width: 100%;
+  background: #e74c3c;
+  color: white;
+}
+header h1 small {
+  font-size: 43%;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: inline-block;
+}
+#home {
+  background: #e74c3c;
+  color: white;
+}
+#home h1 {
+  font-size: 3rem;
+  color: #ecf0f1;
+}
+#home p {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 300;
+}
+#features img {
+  width: 150px;
+}
+#features h2 {
+  font-weight: 300;
+  color: #2ecc71;
+  font-size: 2.5rem;
+}
+#features a {
+  color: #2ecc71;
+}
+#features a:visited,
+#features a:active,
+#features a:hover {
+  color: #2ecc71;
+}
+#docu ul {
+  padding: 0;
+  margin: 0;
+}
+#docu ul li {
+  list-style: none;
+}
+#docu ul li a {
+  color: #3498db;
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+#docu h2 {
+  font-size: 2.5rem;
+  color: #3498db;
+}
+#docu code {
+  color: #16527a;
 }

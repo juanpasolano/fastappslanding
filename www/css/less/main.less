@@ -1,5 +1,5 @@
 @import 'mixins.less';
-
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
 /*This is the almighty clearfix*/
 .clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
@@ -20,3 +20,139 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+.tac{
+	text-align: center;
+}
+.tar{
+	text-align: right;
+}
+
+*{
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Lato';
+}
+html{
+	font-size: 100%;
+}
+@turquoise:#1abc9c;
+@greensea:#16a085;
+@emerald:#2ecc71;
+@nephritis:#27ae60;
+@peterriver:#3498db;
+@belizehole:#3498db;
+@amethyst:#3498db;
+@wisteria:#8e44ad;
+@wetasphalt:#34495e;
+@midnightblue:#2c3e50;
+@sunflower:#f1c40f;
+@orange:#f39c12;
+@carrot:#e67e22;
+@pumpkin:#d35400;
+@alizarin:#e74c3c;
+@pomegranate:#c0392b;
+@clouds:#ecf0f1;
+@sliver:#bdc3c7;
+@concrete:#95a5a6;
+@asbestos:#7f8c8d;
+
+@mainColor: @alizarin;
+
+p{
+	font-weight: 400;
+	color:@midnightblue;
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+}
+h1,h2,h3,h4,h5{
+	font-weight: 300;
+}
+h1{
+		font-size: 3rem;
+}
+code{
+	color:@mainColor;
+}
+section{
+	width: 100%;
+	padding: 3rem;
+	h1{
+		font-size: 4rem;
+		color:@wetasphalt;
+		font-weight: 300;
+		padding-bottom: 2rem;
+		text-transform: uppercase;
+		border-bottom: 1px solid #E2E2E2;
+	}
+}
+
+header{
+	width: 100%;
+	background: @mainColor;
+	color:white;
+	h1 small{
+		font-size: 43%;
+	}
+	a{
+		color:white;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 1rem;
+		margin-top: 2rem;
+		display: inline-block;
+	}
+}
+
+#home{
+	background: @mainColor;
+	color:white;
+	h1{
+		font-size: 3rem;
+		color:@clouds;
+	}
+	p{
+		font-size: 1.3rem;
+		color:white;
+		font-weight: 300;
+	}
+}
+
+#features{
+	img{
+		width: 150px;
+	}
+	h2{
+		font-weight: 300;
+		color:@emerald;
+		font-size: 2.5rem;
+	}
+	a{
+		color:@emerald;
+		&:visited, &:active, &:hover{
+			color:@emerald;
+		}
+	}
+}
+
+#docu{
+	ul{
+		padding: 0;
+		margin: 0;
+		li{
+			list-style: none;
+			a{
+				color:@peterriver;
+				display: block;
+				text-decoration: none;
+				padding: 0.5rem;
+			}
+		}
+	}
+	h2{
+		font-size: 2.5rem;
+		color:@peterriver;
+	}
+	code{
+		color: darken(@peterriver, 25%);
+	}
+}
+
