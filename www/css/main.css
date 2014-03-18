@@ -71,6 +71,16 @@
 html {
   font-size: 100%;
 }
+.button {
+  background: #e74c3c;
+}
+.button:active,
+.button:visited {
+  background: #e74c3c;
+}
+.button:hover {
+  background: #a82315;
+}
 p {
   font-weight: 400;
   color: #2c3e50;
