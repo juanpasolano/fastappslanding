@@ -124,10 +124,12 @@ header a {
   margin-top: .9rem;
   display: inline-block;
 }
+article {
+  margin-top: 74px;
+}
 #home {
   background: #e74c3c;
   color: white;
-  padding-top: 130px;
 }
 #home h1 {
   font-size: 3rem;
