@@ -1,18 +1,18 @@
-module.exports =  function(grunt){
+module.exports =  function (grunt) {
 
 	grunt.initConfig({
 
-		watch:{
-			less:{
-				files:['www/css/less/*.less'],
-				tasks:['less', 'notify:less']
+		watch: {
+			less: {
+				files: ['www/css/less/*.less'],
+				tasks: ['less', 'notify:less']
 			}
 		},
 
-		less:{
-			dist:{
+		less: {
+			dist: {
 				options: {
-					paths: ["www/css", "www/css/less"]
+					paths: ['www/css', 'www/css/less']
 				},
 				files: {
 					'www/css/main.css': 'www/css/less/main.less'
@@ -20,9 +20,9 @@ module.exports =  function(grunt){
 			}
 		},
 
-		notify:{
-			less:{
-				options:{
+		notify: {
+			less: {
+				options: {
 					message: 'LESS files compiled'
 				}
 			},
