@@ -31,7 +31,7 @@
                     <a href="#features">Features</a>
                     <a href="#demo">Demo</a>
                     <a href="#download">Download</a>
-                    <a href="#docu">La docu</a>
+                    <a href="https://github.com/juanpasolano/angular-mobile-demo/wiki" target="_blank">La docu</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
@@ -42,8 +42,9 @@
             <section id="home">
                 <div class="row">
                     <div class="column large-6 medium-6 tac">
+                        <p>Alerta!!! Aunque el boilerplate se puede descargar y usar, este landing y su documentación están aún incompletos.</p>
                         <h1>The ultimate boilerplate for hybrid apps</h1>
-                        <p>Luego de tropezar y tropezar, primero con jQuery mobile (shh! no le digan a nadie que alguna vez usamos jQuery mobile) y luego con jQmobi. Decidimos hacer nuestro propio boilerplate para las apps hibridas. Este recoge toda nuestra experiencia y la pone a dispcición de todos. Enjoy!</p>
+                        <p>Luego de tropezar y tropezar, primero con jQuery mobile (shh! no le digan a nadie que alguna vez usamos jQuery mobile) y luego con jQmobi + BackBone. Decidimos hacer nuestro propio boilerplate para las apps hibridas. Este recoge toda nuestra experiencia y la pone a dispcición de todos. Enjoy!</p>
                     </div>
                     <div class="column large-4 medium-4 tac frame-holder">
                         <img src="img/iphone.png" height="742" width="380" alt="">
@@ -113,6 +114,9 @@
                 <div class="row tac">
                     <div class="column large-10 medium-10 large-centered medium-centered">
                         <p>Simplemente clona este repositorio escribiendo <code>git clone https://github.com/juanpasolano/angular-mobile-demo.git</code> en tu consola.</p>
+                        <p>El clone del repo descarga dos branches importantes: <br>
+                            <strong>Master</strong>: Tiene el boileplate para comenzar a desarrollar <br>
+                            <strong>Development</strong>: Tiene el demo mostrando todas las directivas</p>
                         <p>Una vez clonado da <code>npm install</code> para instalar las dependencias de gruntjs.</p>
                         <p>Luego escribe <code>grunt</code> para empezar a vigilar y compilar los archivos less y contatenar y minificar los archivos javascript.</p>
                     </div>
@@ -126,7 +130,7 @@
             </section>
 
             <a name="docu"></a>
-            <section id="docu">
+            <!-- <section id="docu">
                 <h1 class="tac">LA DOCU</h1>
                 <div class="row">
                     <div class="column large-3 medium-4">
@@ -143,74 +147,11 @@
                         </ul>
                     </div>
                     <div class="column large-9 medium-8">
-<div class="markdown">
-##Prerequisitos
-- Node / npm
-- Grunt CLI
-
-##Instalación
-Para instalar o usar este boilerplate simplemente clona este repositorio dando `git clone https://github.com/juanpasolano/angular-mobile-demo.git` en la consola.
-
-Una vez clonados los archivos debes instalar las dependencias de node para que gruntjs funcione. Esto se hace dando `npm install` en la consola. Si quieres ver las dependencias que se estan usando, mira le archivo `package.json`.
-
-Luego de instalar los paquetes de node puedes comenzar a usar grunt dando `grunt` en la consola.
-
-##Deploy a phonegap
-
-Para enviar los archivos a las carpetas de phonega es probable que tengas que modificar el archivo `Gruntfile.js` que esta en la raiz del directorio.
-
-En grunt esta disponible el task `copy-pg`. Este es el encargado de copiar los archivos hacia la carpeta de phonegap.
-
-Para que funcione bien tienes que cambiar la carpeta a la que esta apuntando `Gruntfile.js`
-
-```
-copy: {
-    phonegap: {
-        files: [
-            {expand: true, src: ['www/**'],
-                dest: '../NOMBRE_CARPETA/platforms/ios/'},
-            {expand: true, src: ['www/**'],
-                dest: '../NOMBRE_CARPETA/platforms/android/assets/'},
-        ]
-    }
-}
-```
-##Gruntjs
-
-Hay 3 tareas de grunt importantes en el boilerplate:
-
-- Comilar LESS.
-- Compilar y concatenar javascript.
-- Copiar archivos a carpetas de phonegap
-
-##Less
-
-Estas son las variables de less disponibles
-
-```
-@mainFont:'Lato', Sans-serif;
-@sideBarWidth:250px;
-@headerHeight: 70px;
-@footerHeight:70px;
-
-@mainColor:#E6375A;
-@secondColor:spin(@mainColor, 20%);
-@darkGray:#4A4D4E;
-@lightGray:#dfe2e2;
-
-@headerColor:@darkGray;
-@sideNavColor:#fff;
-@footerColor:@darkGray;
-@contentColor: white;
-
-@paragraphColor:@darkGray;
-@headersColor:@darkGray;
-```
-</div>
+<div class="markdown"></div>
 
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section id="contact">
                 <a name="contact"></a>
@@ -247,12 +188,13 @@ Estas son las variables de less disponibles
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-49129107-1', 'imaginamos.com');
+          ga('send', 'pageview');
         </script>
     </body>
 </html>
